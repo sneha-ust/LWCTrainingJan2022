@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="ForEach Demo" icon-name="standard:contact">
+        Index Id Name Email
+        <template for:each={contacts} for:item="cc" for:index="index">
+            <div key={cc.id} class="slds-box">{index} {cc.id} {cc.name} {cc.email}</div>
+        </template> 
+    </lightning-card>
+    <lightning-card title="Iterator Demo" icon-name="standard:contact">
+        <hr>
+        <template iterator:con={contacts}>
+            <div key={con.value.id}>{con.value.name} - {con.value.email}</div>
+        </template>
+        <hr>
+    </lightning-card>   
+</template>
