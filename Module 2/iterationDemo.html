@@ -1,9 +1,25 @@
 <template>
     <lightning-card title="ForEach Demo" icon-name="standard:contact">
-        Index Id Name Email
-        <template for:each={contacts} for:item="cc" for:index="index">
-            <div key={cc.id} class="slds-box">{index} {cc.id} {cc.name} {cc.email}</div>
+        <table class="slds-table">
+            <thead>
+                <tr class="slds-line-height_reset">
+                    <th scope="col"> Index </th>
+                    <th scope="col"> Employee ID </th>
+                    <th scope="col"> Name </th>
+                    <th scope="col"> Email </th>
+                </tr>
+            </thead>
+            <tbody>
+        <template for:each={contacts} for:item="cc" for:index="index" class="slds-box">
+            <tr class="slds-hint-parent" key={cc.Id}>
+                <th scope="row"> {index} </th>
+                <th scope="row"> {cc.id} </th>
+                <th scope="row"> {cc.name} </th>
+                <th scope="row"> {cc.email} </th>
+            </tr>
         </template> 
+    </tbody>
+</table>
     </lightning-card>
     <lightning-card title="Iterator Demo" icon-name="standard:contact">
         <hr>
