@@ -1,0 +1,20 @@
+<template>
+    <div class="slds-box">
+    <lightning-card title="Parent" icon-name="standard:person_account">
+        <div onselectevent={handleChild}>
+        <table>
+            <tr>
+            <td>Child One:{childOneSel}</td>
+            <td>Child Two:{childTwoSel}</td>
+            <td>Child Three:{childThreeSel}</td>
+        </tr>
+        <tr>
+            <td><c-multi-Level-Child-One></c-multi-Level-Child-One></td>
+            <td><c-multi-Level-Child-Two ></c-multi-Level-Child-Two></td>
+            <td><c-multi-Level-Child-Three ></c-multi-Level-Child-Three></td>
+        </tr>
+        </table>
+        </div>
+    </lightning-card>
+</div>
+</template>
